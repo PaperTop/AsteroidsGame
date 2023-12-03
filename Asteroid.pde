@@ -1,7 +1,7 @@
-class Asteroids extends Floater
+class Asteroid extends Floater
 {
   private double rotSpeed;
-  Asteroids ()
+  Asteroid ()
   {
     corners = 4;
     xCorners = new int[]{-10, -10, 10, 10};
@@ -19,4 +19,6 @@ class Asteroids extends Floater
     turn(rotSpeed);
     super.move();
   }
+  public double getCentX(){ return myCenterX;}
+  public double getCentY(){ return myCenterY;}
 }
