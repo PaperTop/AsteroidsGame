@@ -24,7 +24,14 @@ class Spaceship extends Floater
       myYspeed = 0;
       myPointDirection = (int)(Math.random()*360);
     }
+    public void move(){
+      super.move();
+      if (myXspeed > 0){myXspeed -= 0.2;}
+      else if (myXspeed < 0){myXspeed += 0.2;}
+      if (myYspeed > 0){myYspeed -= 0.2;}
+      else if (myYspeed < 0){myYspeed += 0.2;}
+    }
     public double getCentX(){ return myCenterX;}
     public double getCentY(){ return myCenterY;}
-   
+    public double getPoint(){ return myPointDirection;}  
 }
